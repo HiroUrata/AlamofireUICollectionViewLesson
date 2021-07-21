@@ -9,39 +9,37 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-//protocol GetImageURLDelegate{
-//
-//    func get
-//
-//}
+
 
 class AlamofireModel{
     
     var searchResultDatasArray = [SearchResultDatas]()
+   
     
 }
+
 
 extension AlamofireModel{
     
     func searchGetImageURL(searchKeyword:String,searchCount:Int){
         
-        AF.request("APIKey\(searchKeyword)", method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
+        AF.request("~~~~~~~~~APIKey~~~~~~~~~&q=\(searchKeyword)", method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
             
             switch response.result{
             
             case.success:
                 
-                self.searchResultDatasArray = []
+                self.searchResultDatasArray = [] //以前のデータを削除
                 
                 let jsonResult:JSON = JSON(response.data as Any)
                 
                 for needDataCount in 0...searchCount - 1{
-                    
+                    print(needDataCount)
                     if jsonResult["hits"][needDataCount]["webformatURL"].string != nil{
                         
-                        let jsonResultArray = SearchResultDatas(imageURLData: jsonResult["hits"][needDataCount]["webformatURL"].string!)
+                        let jsonResult = SearchResultDatas(imageURLData: jsonResult["hits"][needDataCount]["webformatURL"].string!)
                         
-                        self.searchResultDatasArray.append(jsonResultArray)
+                        self.searchResultDatasArray.append(jsonResult)
                         
                     }else{
                         

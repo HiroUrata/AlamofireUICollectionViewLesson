@@ -27,9 +27,19 @@ class ViewController: UIViewController {
         
         self.alamofireModel.searchGetImageURL(searchKeyword: searchKeywordTextField.text!, searchCount: Int(searchCountTextField.text!)!)
         
-        let collectionVC = storyboard?.instantiateViewController(identifier: "collectionVC") as! CollectionViewController
-        
-        self.navigationController?.pushViewController(collectionVC, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            
+            print(self.alamofireModel.searchResultDatasArray)
+            
+            let collectionVC = self.storyboard?.instantiateViewController(identifier: "collectionVC") as! CollectionViewController
+            
+            collectionVC.receiveResultJSONArray = []
+            collectionVC.receiveResultJSONArray = self.alamofireModel.searchResultDatasArray
+            
+            self.navigationController?.pushViewController(collectionVC, animated: true)
+            
+            
+        }
         
     }
     
