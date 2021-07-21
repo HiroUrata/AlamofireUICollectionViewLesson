@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     
     let alamofireModel = AlamofireModel()
+    let activityIndicator = ActivityIndicator()
     
     
     override func viewDidLoad() {
@@ -23,18 +24,27 @@ class ViewController: UIViewController {
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        activityIndicator.createIndicator(targetView: self.view)
+        
+    }
+    
     @IBAction func Search(_ sender: UIButton) {
         
-        self.alamofireModel.searchGetImageURL(searchKeyword: searchKeywordTextField.text!, searchCount: Int(searchCountTextField.text!)!)
+        alamofireModel.searchGetImageURL(searchKeyword: searchKeywordTextField.text!, searchCount: Int(searchCountTextField.text!)!)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            
-            print(self.alamofireModel.searchResultDatasArray)
+        activityIndicator.uiActivityIndicator.startAnimating()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             
             let collectionVC = self.storyboard?.instantiateViewController(identifier: "collectionVC") as! CollectionViewController
             
             collectionVC.receiveResultJSONArray = []
             collectionVC.receiveResultJSONArray = self.alamofireModel.searchResultDatasArray
+            
+            self.activityIndicator.uiActivityIndicator.stopAnimating()
             
             self.navigationController?.pushViewController(collectionVC, animated: true)
             

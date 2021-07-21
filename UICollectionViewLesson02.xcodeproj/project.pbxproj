@@ -16,6 +16,7 @@
 		54D33DAD26A8054E004312B1 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D33DAC26A8054E004312B1 /* CollectionViewController.swift */; };
 		54D33DB326A807A7004312B1 /* SearchResultDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D33DB226A807A7004312B1 /* SearchResultDatas.swift */; };
 		54D33DB526A807D8004312B1 /* AlamofireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D33DB426A807D8004312B1 /* AlamofireModel.swift */; };
+		54D33DB726A8350F004312B1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D33DB626A8350F004312B1 /* ActivityIndicatorView.swift */; };
 		83BC5A30BAB04BA773BB03B2 /* Pods_UICollectionViewLesson02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9821891A743371A2E03703A /* Pods_UICollectionViewLesson02.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		54D33DAC26A8054E004312B1 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		54D33DB226A807A7004312B1 /* SearchResultDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDatas.swift; sourceTree = "<group>"; };
 		54D33DB426A807D8004312B1 /* AlamofireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireModel.swift; sourceTree = "<group>"; };
+		54D33DB626A8350F004312B1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		C02490C4CBE8AE20D6E6C78A /* Pods-UICollectionViewLesson02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewLesson02.release.xcconfig"; path = "Target Support Files/Pods-UICollectionViewLesson02/Pods-UICollectionViewLesson02.release.xcconfig"; sourceTree = "<group>"; };
 		EF380CF9C4A9D9E2CE4B031B /* Pods-UICollectionViewLesson02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewLesson02.debug.xcconfig"; path = "Target Support Files/Pods-UICollectionViewLesson02/Pods-UICollectionViewLesson02.debug.xcconfig"; sourceTree = "<group>"; };
 		F9821891A743371A2E03703A /* Pods_UICollectionViewLesson02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewLesson02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 		54D33DAA26A80104004312B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				54D33DB626A8350F004312B1 /* ActivityIndicatorView.swift */,
 				54D33D9B26A800CE004312B1 /* Main.storyboard */,
 				54D33D9E26A800D1004312B1 /* Assets.xcassets */,
 			);
@@ -244,6 +247,7 @@
 				54D33D9626A800CE004312B1 /* AppDelegate.swift in Sources */,
 				54D33DB526A807D8004312B1 /* AlamofireModel.swift in Sources */,
 				54D33D9826A800CE004312B1 /* SceneDelegate.swift in Sources */,
+				54D33DB726A8350F004312B1 /* ActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
