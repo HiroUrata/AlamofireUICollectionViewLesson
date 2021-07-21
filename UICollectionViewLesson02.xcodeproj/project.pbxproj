@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		54D33D9D26A800CE004312B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D33D9B26A800CE004312B1 /* Main.storyboard */; };
 		54D33D9F26A800D1004312B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D33D9E26A800D1004312B1 /* Assets.xcassets */; };
 		54D33DA226A800D1004312B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D33DA026A800D1004312B1 /* LaunchScreen.storyboard */; };
+		54D33DAD26A8054E004312B1 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D33DAC26A8054E004312B1 /* CollectionViewController.swift */; };
+		54D33DB326A807A7004312B1 /* SearchResultDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D33DB226A807A7004312B1 /* SearchResultDatas.swift */; };
+		54D33DB526A807D8004312B1 /* AlamofireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D33DB426A807D8004312B1 /* AlamofireModel.swift */; };
+		83BC5A30BAB04BA773BB03B2 /* Pods_UICollectionViewLesson02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9821891A743371A2E03703A /* Pods_UICollectionViewLesson02.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		54D33D9E26A800D1004312B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54D33DA126A800D1004312B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54D33DA326A800D1004312B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54D33DAC26A8054E004312B1 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		54D33DB226A807A7004312B1 /* SearchResultDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDatas.swift; sourceTree = "<group>"; };
+		54D33DB426A807D8004312B1 /* AlamofireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireModel.swift; sourceTree = "<group>"; };
+		C02490C4CBE8AE20D6E6C78A /* Pods-UICollectionViewLesson02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewLesson02.release.xcconfig"; path = "Target Support Files/Pods-UICollectionViewLesson02/Pods-UICollectionViewLesson02.release.xcconfig"; sourceTree = "<group>"; };
+		EF380CF9C4A9D9E2CE4B031B /* Pods-UICollectionViewLesson02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewLesson02.debug.xcconfig"; path = "Target Support Files/Pods-UICollectionViewLesson02/Pods-UICollectionViewLesson02.debug.xcconfig"; sourceTree = "<group>"; };
+		F9821891A743371A2E03703A /* Pods_UICollectionViewLesson02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewLesson02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83BC5A30BAB04BA773BB03B2 /* Pods_UICollectionViewLesson02.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FF541997AA9CD4633AA472D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9821891A743371A2E03703A /* Pods_UICollectionViewLesson02.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		54D33D8926A800CE004312B1 = {
 			isa = PBXGroup;
 			children = (
 				54D33D9426A800CE004312B1 /* UICollectionViewLesson02 */,
 				54D33D9326A800CE004312B1 /* Products */,
+				E8CF05E3F9DDC3FF26BD0EEE /* Pods */,
+				4FF541997AA9CD4633AA472D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +79,49 @@
 			children = (
 				54D33D9526A800CE004312B1 /* AppDelegate.swift */,
 				54D33D9726A800CE004312B1 /* SceneDelegate.swift */,
-				54D33D9926A800CE004312B1 /* ViewController.swift */,
-				54D33D9B26A800CE004312B1 /* Main.storyboard */,
-				54D33D9E26A800D1004312B1 /* Assets.xcassets */,
+				54D33DAB26A8010C004312B1 /*  Model */,
+				54D33DAA26A80104004312B1 /* View */,
+				54D33DA926A800F0004312B1 /* Controller */,
 				54D33DA026A800D1004312B1 /* LaunchScreen.storyboard */,
 				54D33DA326A800D1004312B1 /* Info.plist */,
 			);
 			path = UICollectionViewLesson02;
+			sourceTree = "<group>";
+		};
+		54D33DA926A800F0004312B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54D33D9926A800CE004312B1 /* ViewController.swift */,
+				54D33DAC26A8054E004312B1 /* CollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54D33DAA26A80104004312B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54D33D9B26A800CE004312B1 /* Main.storyboard */,
+				54D33D9E26A800D1004312B1 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54D33DAB26A8010C004312B1 /*  Model */ = {
+			isa = PBXGroup;
+			children = (
+				54D33DB226A807A7004312B1 /* SearchResultDatas.swift */,
+				54D33DB426A807D8004312B1 /* AlamofireModel.swift */,
+			);
+			path = " Model";
+			sourceTree = "<group>";
+		};
+		E8CF05E3F9DDC3FF26BD0EEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF380CF9C4A9D9E2CE4B031B /* Pods-UICollectionViewLesson02.debug.xcconfig */,
+				C02490C4CBE8AE20D6E6C78A /* Pods-UICollectionViewLesson02.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54D33DA626A800D1004312B1 /* Build configuration list for PBXNativeTarget "UICollectionViewLesson02" */;
 			buildPhases = (
+				4382B67B4AFA9AAC658455CE /* [CP] Check Pods Manifest.lock */,
 				54D33D8E26A800CE004312B1 /* Sources */,
 				54D33D8F26A800CE004312B1 /* Frameworks */,
 				54D33D9026A800CE004312B1 /* Resources */,
+				F2039C2E757000E3E4295462 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +191,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4382B67B4AFA9AAC658455CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UICollectionViewLesson02-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2039C2E757000E3E4295462 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UICollectionViewLesson02/Pods-UICollectionViewLesson02-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UICollectionViewLesson02/Pods-UICollectionViewLesson02-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UICollectionViewLesson02/Pods-UICollectionViewLesson02-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54D33D8E26A800CE004312B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D33DAD26A8054E004312B1 /* CollectionViewController.swift in Sources */,
+				54D33DB326A807A7004312B1 /* SearchResultDatas.swift in Sources */,
 				54D33D9A26A800CE004312B1 /* ViewController.swift in Sources */,
 				54D33D9626A800CE004312B1 /* AppDelegate.swift in Sources */,
+				54D33DB526A807D8004312B1 /* AlamofireModel.swift in Sources */,
 				54D33D9826A800CE004312B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +387,7 @@
 		};
 		54D33DA726A800D1004312B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF380CF9C4A9D9E2CE4B031B /* Pods-UICollectionViewLesson02.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,12 +400,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CollectionView02.UICollectionViewLesson02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		54D33DA826A800D1004312B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02490C4CBE8AE20D6E6C78A /* Pods-UICollectionViewLesson02.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CollectionView02.UICollectionViewLesson02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
