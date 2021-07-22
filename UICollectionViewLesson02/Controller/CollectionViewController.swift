@@ -15,6 +15,7 @@ class CollectionViewController: UIViewController{
     
     
     let collectionViewFlowLayout = UICollectionViewFlowLayout()
+    let photoView = PhotoView()
     
     var receiveResultJSONArray = [SearchResultDatas]()
     
@@ -64,6 +65,17 @@ extension CollectionViewController:UICollectionViewDelegate,UICollectionViewData
         cellImageView.sd_setImage(with: URL(string: self.receiveResultJSONArray[indexPath.row].imageURLData), completed: nil)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print(indexPath.row)
+        let selectCell = collectionView.cellForItem(at: indexPath)! as UIView
+        
+        photoView.createPhotoView(cellPointX: selectCell.bounds.minX, cellPointY: selectCell.bounds.minY, cellWidth: selectCell.frame.size.width, cellHeight: selectCell.frame.size.height, targetView: selectCell)
+        
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
